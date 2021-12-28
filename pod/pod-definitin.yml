@@ -1,0 +1,19 @@
+# kubectl create -f pod-definition.yml
+
+# mandotory in pods definition
+# 
+apiVersion: v1
+kind: Pod
+metadata:
+    name: myapp-pod 
+    # labels is to identify your pods when you have 100's 
+    # we can have as many k-v pair for labels 
+    labels: 
+        app: myapp
+        type: front-end
+        dev: rishabh
+# object for k8
+spec:
+    containers:
+        - name: nginx-container
+          iamge: nginx
